@@ -1,19 +1,18 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-
-// Set the prefix
-const prefix = "d!";
-client.on("message", (message) => {
-  // Exit and stop if it's not there
-  if (d!message.content.startsWith(prefix)) return;
  
-  if (message.content.startsWith(prefix + "HI")) {
-    message.channel.send("HI I DARK HEXAGON!");
+// Set the prefix
+let prefix = "!";
+client.on("message", (message) => {
+  // Exit and stop if the prefix is not there or if user is a bot
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
   }
 });
-
-// THIS  MUST  BE  THIS  WAY
+ 
 client.login(process.env.BOT_TOKEN);
