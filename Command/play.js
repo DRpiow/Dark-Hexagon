@@ -1,10 +1,3 @@
-// This command will require 2 NPM packages
-//'npm i ytdl-core node-opus'
-const ytdl = require('ytdl-core');
-                     
-//You can use your own command handler if you'd like
-exports.run = async (client, message, args, ops) => {
-  
    // first, we need to check if the auther is connected to a voice channel
   if (!message.member.voiceChannel) return message.channel.send('Please connect to a voice channel.');
   // if not, return & send a message to chat
