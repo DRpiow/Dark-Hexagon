@@ -10,8 +10,8 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "HI")) {
     message.channel.send("HI I DARK HEXAGON!");
   } else
-  if (message.content.startsWith(prefix + "foo")) {
-    message.channel.send("bar!");
+  if (message.content.startsWith(prefix + "introduction")) {
+    message.channel.send("I AM SERVER BOT BUT THE BOT IS UNDER DEVELOPMENT!");
   }
 });
  
